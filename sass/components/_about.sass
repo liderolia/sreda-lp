@@ -1,0 +1,62 @@
+@import "../vars"
+@import "../mixin"
+@import "../setting"
+@import "../fonts"
+
+.aboutus
+    display: flex
+
+    &_text
+        display: flex
+        flex-direction: column
+        justify-content: center
+        width: 95%
+        padding: 60px
+        border-radius: 0 5rem 5rem 0
+        background: $noColor
+        border: 1px solid $monochromeText
+        border-left: 0
+        box-shadow: $boxShadow
+        gap: 20px
+
+        & h4
+            font-size: 1.1rem
+            line-height: 1.3rem
+
+        & p
+            font-family: 'montserratsemibold'
+            font-size: 1rem
+            line-height: 1.25rem
+            color: $monochromeText
+
+        & span
+            font-family: 'montserratbold'
+            color: $colorBasic
+        & img
+            height: 45px
+            width: auto
+
+    &_author
+        display: flex
+        align-items: center
+        gap: 5px
+
+@media screen and (max-width: 1024px)
+    .aboutus_text
+        padding: 40px
+        border-radius: 0 4rem 4rem 0
+
+@media screen and (max-width: 800px)
+    .aboutus
+        justify-content: center
+
+        &_text
+            width: 90%
+            border-radius: 3rem
+            border: 1px solid $monochromeText
+
+@media screen and (max-width: 500px)
+    .aboutus_text
+        padding: 30px 20px
+        border: 1px solid $monochromeText
+        gap: 10px

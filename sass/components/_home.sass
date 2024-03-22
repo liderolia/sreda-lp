@@ -1,0 +1,205 @@
+@import "../vars"
+@import "../mixin"
+@import "../setting"
+@import "../fonts"
+
+.lead
+    display: flex
+    justify-content: flex-end
+
+    &_text
+        display: flex
+        flex-direction: column
+        width: 87.5%
+        padding: 30px 30px 30px 45px
+        border-radius: 11rem 0 0 11rem
+        background: rgba(137, 137, 137, 0.5)
+        text-align: center
+        gap: 10px
+
+        &_title
+            color: $colorBasic
+
+        & h3
+            font-size: 1.3rem
+
+@media screen and (max-width: 1024px)
+    .lead_text
+        width: 90%
+        &_subtitle
+            font-size: 1.6rem
+        h3
+            font-size: 1.2rem
+
+@media screen and (max-width: 800px)
+    .lead_text
+        border-radius: 6rem 0 0 6rem
+        padding: 20px 30px 20px 35px
+        gap: 8px
+
+        &_subtitle
+            font-size: 1.3rem
+        h3
+            font-size: 1.1rem
+
+@media screen and (max-width: 375px)
+    .lead_text
+        width: 95%
+        border-radius: 3rem 0 0 3rem
+        padding: 15px 20px 15px 25px
+
+.heading
+    min-width: 48.5%
+    width: fit-content
+    padding: 20px 30px
+    border-radius: 0px 150px 150px 0px
+    background: $colorDecor
+    text-align: center
+
+.programs
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    gap: 2rem
+    padding-right: min(1rem)
+    padding-left: min(1rem)
+
+    &_card
+        width: 450px
+        padding: 2rem
+        display: flex
+        flex-direction: column
+        gap: $gapMin
+        border-radius: 2rem
+        border: 2px solid $monochromeText
+        background: $noColor
+        box-shadow: $boxShadow
+
+        &_title
+            height: 50px
+            display: flex
+            text-transform: uppercase
+
+        &_img
+            display: block
+            max-height: 250px
+            border-radius: 2rem
+            overflow: hidden
+            width: 100%
+            aspect-ratio: 3 / 2
+
+        &_text
+            height: 40px
+            text-transform: uppercase
+
+@media screen and (max-width: 1024px)
+    .programs
+        gap: 1.5rem
+
+        &_card
+            width: 400px
+            padding: 2rem 1.5rem
+            &_title
+                height: 40px
+
+@media screen and (max-width: 800px)
+    .programs_card_text
+        height: auto
+
+@media screen and (max-width: 500px)
+    .programs_card
+        & h2
+            font-size: 1.3rem
+        & h4
+            font-size: 1rem
+
+@media screen and (max-width: 375px)
+    .programs_card
+        width: 300px
+        padding: 1.5rem
+        border-radius: 1.5rem
+
+        & h4
+            font-size: 0.9rem
+
+        &_img
+            max-height: 200px
+            border-radius: $gapMin
+            overflow: hidden
+            width: 100%
+            aspect-ratio: 3 / 2
+
+.card_buttons
+    display: flex
+    justify-content: space-between
+    width: 100%
+
+.montessori
+    max-width: 90%
+    width: max-content
+    padding: 30px 80px 30px 50px
+    border-radius: 0 100px 100px 0
+    background: $colorDecor
+    display: flex
+    align-items: center
+    gap: 40px
+
+    &_img
+        max-width: 100px
+        width: 100px
+
+    &_text
+        max-width: 500px
+        width: max-content
+        display: flex
+        flex-direction: column
+        gap: 8px
+        border-left: 3px solid $monochromeText
+        padding-left: 40px
+        padding-bottom: 2px
+
+        & h4
+            padding-bottom: 10px
+
+@media screen and (max-width: 1024px)
+    .montessori_text
+        max-width: 450px
+
+        & h1
+            font-size: 1.7rem
+            line-height: 120%
+
+@media screen and (max-width: 800px)
+    .montessori
+        padding: 25px 60px 25px 50px
+        border-radius: 0 80px 80px 0
+        gap: 25px
+        &_text
+            max-width: 400px
+            padding-left: 25px
+
+@media screen and (max-width: 500px)
+    .montessori
+        flex-direction: column
+        max-width: 100%
+        width: 100%
+        border-radius: 0
+        gap: 10px
+        padding: 10px
+
+        &_img
+            width: 60px
+
+        &_text
+            max-width: 90%
+            border-left: none
+            padding: 10px 10px 0
+            border-top: 2px solid $monochromeText
+            align-items: center
+            text-align: center
+
+            & h1
+                font-size: 1.5rem
+
+            & h4
+                padding-bottom: 5px

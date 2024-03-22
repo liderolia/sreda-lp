@@ -1,0 +1,101 @@
+@import "../vars"
+@import "../mixin"
+@import "../setting"
+@import "../fonts"
+
+.footer .center
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+
+.footer
+    position: relative
+    padding: 20px 0
+    background: $colorBasic
+    border-top: 1px solid
+    border-color: #444343
+    z-index: 900
+
+    &_left
+        display: flex
+        flex-direction: column
+        gap: $gapMin
+        & div
+            display: flex
+            flex-direction: column
+            gap: $gapMin
+
+    &_logo
+        height: 50px
+        width: 50px
+
+    &_right
+        display: flex
+        justify-content: center
+        gap: 30px
+
+        &_link
+            text-align: center
+
+        &_text
+            display: flex
+            align-items: center
+            justify-content: center
+            height: 25px
+            width: 5rem
+
+            & p
+                color: $noColor
+                font-family: 'comfortaaregular'
+                font-size: 10px
+                line-height: 130%
+
+.uppercase
+    text-transform: uppercase
+    color: $noColor
+
+.textmini
+    font-family: 'comfortaaregular'
+    font-size: 0.85rem
+    color: $noColor
+    line-height: 100%
+
+@media screen and (max-width: 1024px)
+    .footer_right
+        gap: 20px
+
+    .textmini
+        ont-size: 0.75rem
+
+@media screen and (max-width: 800px)
+    .footer .center
+        flex-direction: column
+        align-items: center
+        gap: 20px
+
+    .footer
+        &_left
+            align-items: center
+            gap: 5px
+            & div
+                flex-direction: row
+                align-items: center
+        &_right
+            gap: 50px
+
+    .textmini
+        padding: 0 10px
+        text-align: center
+        line-height: 150%
+
+@media screen and (max-width: 500px)
+    .footer_right_link svg
+        width: 40px
+        height: auto
+
+@media screen and (max-width: 375px)
+    .footer_right
+        gap: 40px
+
+    .footer_right_link svg
+        width: 35px

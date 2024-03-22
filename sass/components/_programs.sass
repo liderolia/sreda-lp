@@ -1,0 +1,185 @@
+@import "../vars"
+@import "../mixin"
+@import "../setting"
+@import "../fonts"
+
+.program_right
+    display: flex
+    justify-content: flex-end
+
+.title_right
+    border-radius: 5rem 0 0 5rem
+    min-width: min-content
+    max-width: 90%
+    padding: 20px 60px
+
+@media screen and (max-width: 500px)
+    .title_right
+        padding: 20px 30px
+
+@media screen and (max-width: 375px)
+    .title_right
+        max-width: 95%
+        border-radius: 3rem 0 0 3rem
+        padding: 10px 10px 10px 20px
+
+    .aboutus_text li
+        font-family: "montserratsemibold"
+        color: $monochromeText
+        margin-top: 15px
+
+.aboutus_text ul
+    padding-left: 1rem
+    & li
+        margin-top: 15px
+        color: $colorBasic
+        font-family: 'montserratbold'
+        color: $colorBasic
+
+        &:first-child
+            margin-top: 0
+
+        & span
+            font-family: 'montserratsemibold'
+            color: $monochromeText
+
+@media screen and (max-width: 500px)
+    .aboutus_text ul li
+        font-family: 'montserratsemibold'
+        font-size: 1.15rem
+        & span
+            font-size: 1rem
+
+.program_description
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    gap: 2rem
+
+.anchor
+    max-width: 90%
+    width: calc(0.9 * $withSite)
+    position: relative
+    top: -110px
+    padding-top: 110px
+    margin-bottom: -110px
+
+@media screen and (max-width: 800px)
+    .anchor
+        top: -80px
+        padding-top: 80px
+        margin-bottom: -80px
+
+.ourprograms
+    display: flex
+    flex-direction: column
+    //width: calc(0.9 * $withSite)
+    background-color: $noColor
+    padding: 30px
+    border: 1px solid $monochromeText
+    box-shadow: $boxShadow
+    border-radius: 2rem
+
+    &_title
+        display: flex
+        gap: 40px
+        padding-bottom: $gapMin
+
+    &_content
+        display: flex
+        gap: 40px
+
+    &_left
+        width: 35%
+        min-width: 300px
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        gap: 25px
+
+    &_right
+        max-width: 60%
+        display: flex
+        flex-direction: column
+        gap: 10px
+
+        h4
+            color: $monochromeText
+
+        span
+            font-family: 'montserratbold'
+            font-size: 1rem
+            color: $colorBasic
+
+@media screen and (max-width: 1024px)
+    .ourprograms
+        padding: 25px
+        &_title
+            gap: 25px
+        &_content
+            gap: 25px
+        &_left
+            width: 45%
+            //max-width: 400px
+            & h2
+                font-size: 1.2rem
+        &_right
+            max-width: 50%
+            gap: 5px
+            & h4
+                font-size: 0.9rem
+                line-height: 1.1rem
+
+@media screen and (max-width: 800px)
+    .ourprograms
+        &_title
+            flex-direction: column
+            gap: 10px
+
+        &_content
+            flex-direction: column
+            gap: 20px
+
+        &_center
+            max-width: 375px
+            width: 95%
+            align-items: center
+            margin: 0 auto
+            gap: 15px
+
+        &_left
+            min-width: auto
+            width: 100%
+
+        &_right
+            max-width: 100%
+
+    .content_span
+        font-size: 1.1rem
+
+@media screen and (max-width: 375px)
+    .content_span
+        line-height: 1.3rem
+
+.content
+    &_text
+        display: flex
+        flex-direction: column
+        gap: $gapMin
+
+        & span
+            font-family: 'montserratbold'
+
+        &_li li
+            margin-top: 10px
+
+            &:first-child
+                margin-top: 0
+
+    & ul
+        padding-left: 1rem
+
+    &_span
+        margin-left: -1rem
+        font-family: 'montserratsemibold'
+        color: $colorBasic

@@ -1,0 +1,25 @@
+@mixin button
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 15px
+    min-width: 46%
+    width: min-content
+    background-color: $backgroundColor
+    border: 3px solid $colorBasic
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25)
+    color: $colorBasic
+    font-family: 'montserratbold'
+    border-radius: 30px
+    text-transform: uppercase
+    cursor: pointer
+    user-select: none
+
+@mixin buttonHover
+    background-color: $colorBasic
+    color: $noColor
+
+@mixin buttonActive
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.25)
+    margin-top: 1px
+    margin-bottom: -1px

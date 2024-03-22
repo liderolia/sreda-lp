@@ -1,0 +1,85 @@
+@import "../vars"
+@import "../mixin"
+@import "../setting"
+@import "../fonts"
+
+.slider
+    position: relative
+    margin-bottom: 10px
+
+.image
+    width: calc(100% - 100px)
+    margin: 0 auto
+    overflow: hidden
+    display: flex
+    gap: 10px
+
+    & img
+        height: 400px
+        object-fit: cover
+
+.prev
+    cursor: pointer
+    width: 50px
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    background-color: $colorDecor
+    border: none
+    outline: none
+
+    &:hover svg, &:active svg
+        fill: $colorBasic
+        transition: 1s
+
+    & svg
+        width: 30px
+        fill: $noColor
+        opacity: 0.8
+
+.next
+    cursor: pointer
+    width: 50px
+    position: absolute
+    top: 0
+    right: 0
+    height: 100%
+    background-color: $colorDecor
+    border: none
+    outline: none
+
+    &:hover svg, &:active svg
+        fill: $colorBasic
+        transition: 1s
+
+    & svg
+        width: 30px
+        fill: $noColor
+        opacity: 0.8
+
+@media screen and (max-width: 1024px)
+    .image img
+        height: 300px
+
+@media screen and (max-width: 800px)
+    .image img
+        height: 250px
+
+@media screen and (max-width: 500px)
+
+    .image
+        width: calc(100% - 60px)
+        gap: 5px
+        & img
+            height: 150px
+
+    .prev
+        width: 30px
+        & svg
+            width: 20px
+
+    .next
+        width: 30px
+        & svg
+            width: 20px

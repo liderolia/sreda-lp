@@ -1,0 +1,42 @@
+@import "../vars"
+@import "../mixin"
+@import "../setting"
+@import "../fonts"
+
+.map
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    &_width
+        width: 70%
+        @media (max-width: 1024px)
+            width: 80%
+        @media (max-width: 800px)
+            width: 90%
+
+    &_content
+        border-radius: 2rem
+        border: 1px solid $monochromeText
+        background: $noColor
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25)
+        backdrop-filter: blur(20px)
+
+.contacts
+    display: flex
+    flex-direction: column
+    padding-top: 4rem
+    gap: 25px
+
+    &_content
+        display: grid
+        grid-template-columns: 4rem 1fr
+        align-items: center
+
+        h4
+            color: $monochromeText
+
+    &_content:hover h4,
+    &_content:hover svg path
+        color: $colorBasic
+        fill: $colorBasic
